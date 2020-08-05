@@ -1,10 +1,11 @@
-class SelectionSort
-{
-    void sort(int arr[])
-    {
-        int n = arr.length;
 
-        // One by one move boundary of unsorted subarray
+
+class SelectionSort{
+
+    int[] arr = new int[]{64, 34, 25, 12, 22, 11, 90};
+
+    void sort(){
+        int n = arr.length;
         for (int i = 0; i < n-1; i++)
         {
             // Find the minimum element in unsorted array
@@ -19,24 +20,18 @@ class SelectionSort
             arr[min_idx] = arr[i];
             arr[i] = temp;
         }
-    }
 
-    // Prints the array
-    void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i=0; i<n; ++i)
+
+        System.out.println("array");
+        for(int i=0;i<arr.length;++i){
+
             System.out.print(arr[i]+" ");
-        System.out.println();
+        }
     }
 
-    // Driver code to test above
-    public static void main(String args[])
-    {
-        SelectionSort ob = new SelectionSort();
-        int arr[] = {5,25,12,22,11};
-        ob.sort(arr);
-        System.out.println("Sorted array");
-        ob.printArray(arr);
+
+    public static void main(String ak[]){
+        SelectionSort obj = new SelectionSort();
+        obj.sort();
     }
 }
