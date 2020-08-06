@@ -1,20 +1,35 @@
 
 public class BinarySearch {
 
-    void search(int[] array, int x){
+    int[] binaryArray = new int[]{2,4,6,8,9,10,13,17};
+    int find = 13;
+
+    void search(){
 
         int start =0;
-        int end = array.length -1;
+        int end = binaryArray.length -1;
         int half = end /2;
-        if(end >=start){
+        if(find <= binaryArray[half]){
+            for(int i=0;i< half;i++){
+                if(binaryArray[i]==find){
+                    System.out.println("value index is "+ i);
+                }
+            }
+        }else {
+            for(int i=half;i< end;i++){
+                if(binaryArray[i]==find){
+                    System.out.println("value index is "+ i);
+                }
+            }
 
-            while()
         }
     }
 
     public static  void main(String ak[]){
-        System.out.println("Binary Search");
-        int[] binaryArray = new int[]{2,4,6,8,9,10,13,17};
+        BinarySearch obj = new BinarySearch();
+        obj.search();
+
+
 
     }
 }
